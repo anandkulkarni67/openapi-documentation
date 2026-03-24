@@ -67,8 +67,8 @@
 		"securitySchemes": {}
 	},
 	"info": {
-		"title": "optimistic-locking-api",
-		"version": "1.0.10",
+		"title": "openapi-documentation-api",
+		"version": "1.0.2",
 		"contact": {}
 	},
 	"paths": {

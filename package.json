@@ -1,0 +1,19 @@
+{
+  "name": "opeanapi-documentation",
+  "version": "1.0.0",
+  "description": "OpenAPI documentation implementation",
+  "homepage": "https://github.com/anandkulkarni67/openapi-documentation#readme",
+  "bugs": {
+    "url": "https://github.com/anandkulkarni67/openapi-documentation/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anandkulkarni67/openapi-documentation.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "scripts": {
+    "name": "echo $npm_package_name",
+    "version": "echo $npm_package_version"
+  }
+}

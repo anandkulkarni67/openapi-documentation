@@ -12,7 +12,10 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api-docs', (req: express.Request, res: express.Response, next: express.NextFunction) => {
+    if (req.originalUrl == "/api-docs") return res.redirect('api-docs/')
+    next()
+}, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 RegisterRoutes(app);
 

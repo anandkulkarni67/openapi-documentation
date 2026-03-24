@@ -11,7 +11,7 @@ aws cloudformation deploy \
     --stack-name "$application_name-github-oidc" \
     --template-file $template_file \
     --region $region \
-    --parameter-overrides "GithubRepositoryName=$application_name" "GithubUserName=$github_username" \
+    --parameter-overrides "ApplicationName=$application_name" "GithubRepositoryName=$application_name" "GithubUserName=$github_username" \
     --capabilities CAPABILITY_NAMED_IAM
 
 if [ $? -ne 0 ]; then

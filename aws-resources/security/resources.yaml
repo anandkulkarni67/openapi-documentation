@@ -39,7 +39,7 @@ Resources:
                   - dynamodb:PutItem
                   - dynamodb:DeleteItem
                   - dynamodb:UpdateItem
-                Resource: !Sub 'arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/optimistic-locking*'
+                Resource: !Sub 'arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/*'
 Outputs:
   APILambdaInvocatinRoleArn:
     Value: !GetAtt APILambdaInvocatinRole.Arn

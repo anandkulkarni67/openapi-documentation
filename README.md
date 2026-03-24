@@ -1,22 +1,11 @@
 # Automatic generation of routes and documentation using decorators in Typescript.
 
-## Change directory to API
-```
-cd api
-```
-
-## download and install dependencies
-```
-npm install
-```
-
-## Compiles typescript project
-```
-npm run build
-```
-
 ## Run the api locally
 ```
+cd api
+npm install
+npm run build
+
 AWS_SAM:
 sam local start-api --template-file serverless.yaml
 sample http request: http://127.0.0.1:3000/v1/healthcheck/app

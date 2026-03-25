@@ -48,6 +48,7 @@ Resources:
                   - lambda:*
                   - apigateway:*
                   - dynamodb:*
+                  - logs:*
 
 Outputs:
   GithubOIDCAuthenticationRoleArn:

@@ -28,6 +28,7 @@ Resources:
       Runtime: nodejs24.x
       LoggingConfig:
         LogFormat: JSON
+        LogGroup: !Ref APIFunctionLogGroup
       Environment:
         Variables:
           CUSTOMER_TABLE_NAME:

@@ -10,8 +10,10 @@ import {
   Route,
   Tags
 } from "tsoa";
-import { CustomerMetadata } from "../../model/data/CustomerMetadata";
+import { UpdateCustomerMetadata } from "../../model/data/UpdateCustomerMetadata";
 import { customerService } from "../../service/Customer.service";
+import { GetCustomerMetadata } from "../../model/data/GetCustomerMetadata";
+import { CreateCustomerMetadata } from "../../model/data/CreateCustomerMetadata";
 
 @Tags("Customers")
 @Route("/v1/customers")
@@ -20,15 +22,15 @@ export class CustomerController extends Controller {
   @Get('{id}')
   public async getCustomer(
     @Path() id: string
-  ): Promise<CustomerMetadata> {
+  ): Promise<GetCustomerMetadata> {
     this.setStatus(200);
     return customerService.getCustomer(id);
   }
 
   @Post()
   public async createCustomer(
-    @Body() CustomerMetadata: CustomerMetadata
-  ): Promise<CustomerMetadata> {
+    @Body() CustomerMetadata: CreateCustomerMetadata
+  ): Promise<GetCustomerMetadata> {
     this.setStatus(200);
     return customerService.addCustomer(CustomerMetadata);
   }
@@ -36,8 +38,8 @@ export class CustomerController extends Controller {
   @Put('{id}')
   public async updateCustomer(
     @Path() id: string,
-    @Body() CustomerMetadata: CustomerMetadata
-  ): Promise<CustomerMetadata> {
+    @Body() CustomerMetadata: UpdateCustomerMetadata
+  ): Promise<GetCustomerMetadata> {
     this.setStatus(200);
     return customerService.updateCustomer(id, CustomerMetadata);
   }

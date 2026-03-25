@@ -1,6 +1,6 @@
 {
   "name": "openapi-documentation",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "OpenAPI documentation implementation",
   "homepage": "https://github.com/anandkulkarni67/openapi-documentation#readme",
   "bugs": {

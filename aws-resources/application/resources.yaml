@@ -26,6 +26,8 @@ Resources:
             };
           };
       Runtime: nodejs24.x
+      LoggingConfig:
+        LogFormat: JSON
       Environment:
         Variables:
           CUSTOMER_TABLE_NAME:

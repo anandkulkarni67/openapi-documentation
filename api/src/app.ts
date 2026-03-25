@@ -1,5 +1,4 @@
 import express from 'express';
-import routes from './routes';
 import { NotFound } from './model/error/NotFound';
 import { SystemError } from './model/error/SystemError';
 import { ValidationError } from './model/error/ValidationError';

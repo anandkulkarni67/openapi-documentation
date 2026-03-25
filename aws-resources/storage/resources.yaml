@@ -25,7 +25,7 @@ Resources:
 
 Outputs:
   DynamoDB:
-    Description: "DynamoDB table arn"
+    Description: 'DynamoDB table arn'
     Export:
       Name: !Join [ '-', [ !Ref ApplicationName, 'customer-table']]
-    Value: !GetAtt CustomerTable.Arn
+    Value: !Ref CustomerTable

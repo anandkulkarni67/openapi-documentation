@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "ts-node src/index.ts",
-    "build": "rimraf dist && tsoa spec-and-routes && tsc",
+    "gen-spec": "tsoa spec",
+    "gen-routes": "tsoa routes",
+    "build": "rimraf dist && npm run gen-spec && npm run gen-routes && tsc",
     "serve": "node dist/main.js",
     "version": "echo $npm_package_version",
     "name": "echo $npm_package_name"

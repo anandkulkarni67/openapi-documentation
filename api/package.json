@@ -1,6 +1,6 @@
 {
   "name": "openapi-documentation-api",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "private": true,
   "scripts": {
     "start": "ts-node src/index.ts",

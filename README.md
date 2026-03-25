@@ -1,30 +1,18 @@
-# Optimistic locking implementation using version attribute on DynamoDB Database table.
-
-## Change directory to API
-```
-cd api
-```
-
-## download and install dependencies
-```
-npm install
-```
-
-## Compiles the project
-```
-npm run build
-```
-
-## Compiles typescript project
-```
-npm run build
-```
+# Automatic generation of routes and documentation using decorators in Typescript.
 
 ## Run the api locally
 ```
-sam local start-api --template-file serverless.yaml
+cd api
+npm install
+npm run build
 
-sample http request: http://127.0.0.1:3000/v1/greet
+AWS_SAM:
+sam local start-api --template-file serverless.yaml
+sample http request: http://127.0.0.1:3000/v1/healthcheck/app
+
+NPM:
+npm run serve
+sample http request: http://localhost:3000/v1/healthcheck/app
 ```
 
 ## GitHub integration
@@ -48,4 +36,11 @@ sample http request: http://127.0.0.1:3000/v1/greet
   - Branch: main
   - Job: deploy-aws-resources
   - release: any one the available ones in the dropdown. 
+```
+
+## API Documentation
+```
+AWS: https://{Apigw-id}.execute-api.{region}.amazonaws.com/{stage}/api-docs/
+AWS_SAM: http://127.0.0.1:3000/api-docs/
+Local: http://localhost:3000/api-docs/
 ```

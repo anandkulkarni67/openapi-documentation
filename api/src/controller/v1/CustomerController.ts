@@ -29,6 +29,7 @@ export class CustomerController extends Controller {
   public async createCustomer(
     @Body() CustomerMetadata: CustomerMetadata
   ): Promise<CustomerMetadata> {
+    this.setStatus(200);
     return customerService.addCustomer(CustomerMetadata);
   }
 

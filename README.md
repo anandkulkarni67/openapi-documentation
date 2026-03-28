@@ -27,16 +27,18 @@ Run following command to tead down aws resources.
 
 ```
 
-## GitHub integration for cloud set up
+## GitHub integration for cloud
 ```
-1. Go to the source code github repository.
-2. Click on Settings.
-3. Click on Environments on the side panel and create a 'production' environment.
-4. Create three secret environment variables.
+1. Run the following script from your machine or create the respective cloudformation stack to begin github integration.
+./aws-resources/github-oidc/scripts/deploy.sh <github-username>
+2. Go to the source code github repository.
+3. Click on Settings.
+4. Click on Environments on the side panel and create a 'production' environment.
+5. Create three secret environment variables.
    AWS_REGION ( AWS region in which resources are deployed )
    AWS_ACCOUNT_ID ( ID of the AWS account where resources are deployed )
-   OIDC_ROLE_NAME ( you can find this value in the output of 'security' cloudformation stack )
-5. Create a standard environment variable.
+   OIDC_ROLE_NAME ( you can find this value in the output of '<application-name>-github-oidc' cloudformation stack )
+6. Create a standard environment variable.
    APPLICATION_NAME ( must be same as the one used when creating an 'application' stack. )
 ```
 

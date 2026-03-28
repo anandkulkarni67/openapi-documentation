@@ -24,7 +24,6 @@ Run following command to create aws resources.
 
 Run following command to tead down aws resources.
 ./tear-down-local-environment.sh
-
 ```
 
 ## Github integration for cloud

@@ -15,7 +15,19 @@ npm run serve
 sample http request: http://localhost:3000/v1/healthcheck/app
 ```
 
-## GitHub integration
+## AWS Resource creation and deletion on local machine
+```
+From the root directory,
+
+Run following command to create aws resources.
+./setup-local-environment.sh
+
+Run following command to tead down aws resources.
+./tear-down-local-environment.sh
+
+```
+
+## GitHub integration for cloud set up
 ```
 1. Go to the source code github repository.
 2. Click on Settings.
@@ -28,7 +40,7 @@ sample http request: http://localhost:3000/v1/healthcheck/app
    APPLICATION_NAME ( must be same as the one used when creating an 'application' stack. )
 ```
 
-## AWS Resource creation
+## AWS Resource creation in cloud
 ```
 1. Go to github actions.
 2. Click on Deploy a project.

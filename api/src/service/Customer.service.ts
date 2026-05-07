@@ -66,7 +66,7 @@ class CustomerService {
             if (error.message && error.message == 'The conditional request failed') {
                 if (error.Item) {
                     if ( error.Item.Version.N != metadata.version) {
-                        throw new ResourceConflict('State conflict for the Customer record [ customerId: ' + customerId + ' ]')
+                        throw new ResourceConflict('State conflict for the Customer record [ customerId: ' + customerId + ' ]');
                     }
                 } else {
                     throw new NotFound('Customer with [ customerId: ' + customerId + ' ] not found.');
@@ -94,7 +94,7 @@ class CustomerService {
             if (error.message && error.message == 'The conditional request failed') {
                 if (error.Item) {
                     if ( error.Item.Version.N != version) {
-                        throw new ResourceConflict('State conflict for the Customer record [ customerId: ' + customerId + ' ]')
+                        throw new ResourceConflict('State conflict for the Customer record [ customerId: ' + customerId + ' ]');
                     }
                 } else {
                     throw new NotFound('Customer with [ customerId: ' + customerId + ' ] not found.');
@@ -119,7 +119,7 @@ class CustomerService {
                     version: data.Item.Version
                 };
             }
-            throw new NotFound('Customer [id: ' + customerId + '] not found.');
+            throw new NotFound('Customer with [ customerId: ' + customerId + ' ] not found.');
         } catch (error: any) {
             throw error;   
         }
